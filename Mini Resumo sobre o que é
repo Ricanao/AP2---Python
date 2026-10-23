@@ -1,5 +1,11 @@
-# AP2---Python
-Matéria realizada para AP2 em programação e algoritmo 
-Este repositório foi criado para entrega da AP2 em python contendo o projeto
-1. Solitário
-2. Chat
+Como funciona o código do Solitaire
+O jogo foi desenvolvido em Python usando a biblioteca Flet, responsável por criar a janela, exibir as cartas e reconhecer cliques e movimentos do mouse. O arquivo principal do projeto é o main.py. O arquivo pyproject.toml informa os dados do projeto e sua dependência do Flet. As imagens usadas pelo jogo ficam na pasta assets/images.
+No início do código são definidas as medidas das cartas, o espaço entre elas nas pilhas e o tamanho de referência do tabuleiro. Também são indicados os caminhos das imagens de fundo e do verso das cartas. O programa usa essas medidas para ajustar o tabuleiro quando a janela muda de tamanho.
+As classes Suite e Rank representam, respectivamente, os naipes e os valores das cartas. Cada naipe tem um nome e uma cor. Cada valor tem um nome e um número, usado para verificar se uma jogada está na ordem correta.
+A função main prepara a janela e cria o tabuleiro. A função make_slot cria os espaços onde as cartas ficam. O jogo tem um monte de compra, um espaço de descarte, quatro fundações e sete colunas principais, chamadas tableau.
+A classe Card representa cada carta. Ela guarda seu naipe, valor, posição e se está virada para cima ou para baixo. Quando clicamos no monte de compra, a carta do topo passa para o descarte. Também é possível arrastar cartas e, nas colunas principais, mover junto as cartas que estão acima da carta selecionada.
+O método can_drop_on verifica se uma jogada é permitida. No tableau, uma carta só pode ser colocada sobre outra de valor imediatamente superior e de cor diferente. Uma coluna vazia só pode receber um Rei. Nas fundações, a sequência começa com Ás e continua em ordem crescente, sempre do mesmo naipe.
+A função update_positions calcula onde cada carta deve aparecer. Quando uma carta é retirada de uma coluna, a carta que estava coberta vira para cima. A função apply_responsive_layout ajusta o tamanho das cartas e do tabuleiro conforme o tamanho da janela.
+O baralho é formado por 52 cartas: quatro naipes com treze valores cada. O programa embaralha as cartas, distribui sete colunas no tableau e deixa as restantes no monte de compra. Quando o monte acaba, ele permanece vazio.
+Para personalizar o jogo, as imagens devem ficar na pasta assets/images. O fundo e o verso das cartas são escolhidos pelas configurações no começo do arquivo main.py. As imagens da frente das cartas seguem o padrão nome do valor, underline e nome do naipe, como Ace_spades.svg.
+Para executar o jogo, abra um terminal na pasta do projeto e digite python main.py.
