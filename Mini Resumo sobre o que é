@@ -9,3 +9,4 @@ A função update_positions calcula onde cada carta deve aparecer. Quando uma ca
 O baralho é formado por 52 cartas: quatro naipes com treze valores cada. O programa embaralha as cartas, distribui sete colunas no tableau e deixa as restantes no monte de compra. Quando o monte acaba, ele permanece vazio.
 Para personalizar o jogo, as imagens devem ficar na pasta assets/images. O fundo e o verso das cartas são escolhidos pelas configurações no começo do arquivo main.py. As imagens da frente das cartas seguem o padrão nome do valor, underline e nome do naipe, como Ace_spades.svg.
 Para executar o jogo, abra um terminal na pasta do projeto e digite python main.py.
+O desenvolvimento deste projeto foi realizado com ajuda do Codex, que auxiliou na análise, organização e explicação do código, além da implementação de recursos para as cartas, as pilhas e o redimensionamento do tabuleiro.
